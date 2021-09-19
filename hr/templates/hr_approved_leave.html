@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Pending Request</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            table,th,td{
+                border: 1px solid ;
+                padding:25px;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Reason</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in ViewLeave %}
+                <tr>
+                    <td>{{i.Start_date}}</td>
+                    <td>{{i.End_date}}</td>
+                    <td>{{i.Matter}}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
